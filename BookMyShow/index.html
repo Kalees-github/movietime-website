@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookMyShow Clone - Movie Tickets & Events</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 1. Main Header -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <div class="header-left">
+
+                <!-- Logo -->
+
+                <a href="index.html" class="logo">
+                    <img src="images/image.png" alt="Movie Hub">
+                </a>
+
+                <!-- Search -->
+
+                <div class="search-bar">
+
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                    <input type="text"
+                           id="searchInput"
+                           placeholder="Search for Movies, Events, Plays, Sports and Activities">
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <!-- Location -->
+
+                <div class="location-picker">
+
+                    <button type="button"
+                            class="location-btn"
+                            onclick="toggleLocationDropdown(event)">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="selectedLocation">Select City</span>
+
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+
+                    </button>
+
+                    <div class="location-dropdown" id="locationDropdown">
+
+                        <div class="location-title">Select your city</div>
+
+                        <button type="button" onclick="selectLocation('Coimbatore')">
+                            Coimbatore
+                        </button>
+
+                        <button type="button" onclick="selectLocation('Chennai')">
+                            Chennai
+                        </button>
+
+                        <button type="button" onclick="selectLocation('Bengaluru')">
+                            Bengaluru
+                        </button>
+
+                        <button type="button" onclick="selectLocation('Kochi')">
+                            Kochi
+                        </button>
+
+                        <button type="button" onclick="selectLocation('Madurai')">
+                            Madurai
+                        </button>
+
+                        <button type="button" onclick="selectLocation('Salem')">
+                            Salem
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sign In -->
+
+                <div class="signin-wrapper">
+
+                    <button class="btn-signin" onclick="toggleSignin()">
+                        Sign In
+                    </button>
+
+                    <div class="signin-dropdown" id="signinDropdown">
+
+                        <h3>Sign In</h3>
+
+                    <form onsubmit="loginUser(event)">
+
+                        <input type="text"
+                               id="loginName"
+                               placeholder="Your Name" >
+
+                        <input type="text"
+                               id="loginEmail"
+                               placeholder="Email or Mobile Number">
+
+                        <input type="tel"
+                               id="loginMobile"
+                               placeholder="Mobile Number" >
+
+                        <input type="password"
+                               id="loginPassword"
+                               placeholder="Password">
+
+                        <p id="loginMessage"
+                           class="login-message">
+                        </p>
+
+                        <button type="submit" class="login-btn">
+                            Login
+                        </button>
+
+                    </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Menu -->
+
+                <div class="menu-wrapper">
+
+                    <button type="button"
+                            class="menu-icon"
+                            onclick="toggleMenu(event)"
+                            aria-label="Open menu">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="menu-dropdown" id="menuDropdown">
+
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user"></i>
+                            My Profile
+                        </a>
+
+                        <a href="#" onclick="comingSoon(event)">
+                            <i class="fa-solid fa-ticket"></i>
+                            My Bookings
+                        </a>
+
+                        <a href="#" onclick="comingSoon(event)">
+                            <i class="fa-solid fa-tag"></i>
+                            Offers
+                        </a>
+
+                        <a href="#" onclick="comingSoon(event)">
+                            <i class="fa-solid fa-circle-question"></i>
+                            Help & Support
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- 2. Sub Navigation -->
+
+    <nav class="subnav">
+
+        <div class="subnav-container">
+
+            <ul class="nav-menu primary-menu">
+
+                <li>
+                    <a href="#movies-section" class="active">
+                        Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="comedies.html">Stream</a>
+                </li>
+
+                <li>
+                    <a href="concerts.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="comingSoon(event)">Sports</a>
+                </li>
+
+                <li>
+                    <a href="#kids-section">Entertainment</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- 3. Banner Slider -->
+
+    <section class="banner-section">
+
+        <div class="banner-slider">
+
+            <div class="banner active">
+
+                <img src="images/banner.avif" alt="Live Event Banner">
+
+            </div>
+
+            <div class="banner">
+
+                <img src="images/banner3.avif" alt="Music Event Banner">
+
+            </div>
+
+            <div class="banner">
+
+                <img src="images/banner4.jpg" alt="Movie Event Banner">
+
+            </div>
+
+
+            <!-- Previous -->
+
+            <button class="slider-btn previous" onclick="previousBanner()">
+                &#10094;
+            </button>
+
+
+            <!-- Next -->
+
+            <button class="slider-btn next" onclick="nextBanner()">
+                &#10095;
+            </button>
+
+
+            <!-- Dots -->
+
+            <div class="dots">
+
+                <span class="dot active-dot" onclick="showBanner(0)"></span>
+                <span class="dot" onclick="showBanner(1)"></span>
+                <span class="dot" onclick="showBanner(2)"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4. Movies -->
+
+    <section class="movies-section" id="movies-section">
+
+        <div class="movies-container">
+
+            <div class="section-title-bar">
+
+                <h2>Movies</h2>
+
+            </div>
+
+            <div class="movies-wrapper">
+
+                <!-- Previous -->
+
+                <button class="movie-prev" onclick="scrollMoviesLeft()">
+                    ‹
+                </button>
+
+
+                <!-- Movie Cards -->
+
+                <div class="movies-grid" id="moviesGrid">
+
+
+                    <!-- Movie 1 -->
+
+                    <div class="movie-card searchable-card"
+                         onclick="openMovie('jana-nayagan.html')">
+
+                        <div class="poster-box">
+
+                            <img src="images/movie1.webp"
+                                 alt="Jana Nayagan Poster">
+
+                        </div>
+
+                        <h3 class="movie-title">Jana Nayagan</h3>
+
+                        <p class="movie-genre">Action / Drama</p>
+
+                    </div>
+
+
+                    <!-- Movie 2 -->
+
+                    <div class="movie-card searchable-card"
+                         onclick="openMovie('Gatta Kusthi.html')">
+
+                        <div class="poster-box">
+
+                            <img src="images/movie2.webp"
+                                 alt="Gatta Kusthi 2 Poster">
+
+                        </div>
+
+                        <h3 class="movie-title">Gatta Kusthi 2</h3>
+
+                        <p class="movie-genre">
+                            Comedy / Drama / Romantic
+                        </p>
+
+                    </div>
+
+
+                    <!-- Movie 3 -->
+
+                    <div class="movie-card searchable-card"
+                         onclick="openMovie('idhayam-murali.html')">
+
+                        <div class="poster-box">
+
+                            <img src="images/movie4.webp"
+                                 alt="Idhayam Murali Poster">
+
+                        </div>
+
+                        <h3 class="movie-title">Idhayam Murali</h3>
+
+                        <p class="movie-genre">Romance / Drama</p>
+
+                    </div>
+
+
+                    <!-- Movie 4 -->
+
+                    <div class="movie-card searchable-card"
+                         onclick="openMovie('anbe-diana.html')">
+
+                        <div class="poster-box">
+
+                            <img src="images/movie5.webp"
+                                 alt="Anbe Diana Poster">
+
+                        </div>
+
+                        <h3 class="movie-title">Anbe Diana</h3>
+
+                        <p class="movie-genre">Comedy / Family</p>
+
+                    </div>
+
+
+                    <!-- Movie 5 -->
+
+                    <div class="movie-card searchable-card"
+                         onclick="openMovie('Karuppu.html')">
+
+                        <div class="poster-box">
+
+                            <img src="images/movie6.webp"
+                                 alt="Karuppu Poster">
+
+                        </div>
+
+                        <h3 class="movie-title">Karuppu</h3>
+
+                        <p class="movie-genre">Action / Comedy</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Next -->
+
+                <button class="movie-next" onclick="scrollMovies()">
+                    ›
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5. Comedy Shows -->
+
+    <section class="comedy-section">
+
+        <div class="comedy-container">
+
+            <div class="section-title-bar">
+
+                <h2>Comedy Shows</h2>
+
+                <a href="comedies.html" class="see-all">
+                    See All &gt;
+                </a>
+
+            </div>
+
+            <div class="comedy-wrapper">
+
+                <button class="comedy-prev" onclick="scrollComedyLeft()">
+                    ‹
+                </button>
+
+                <div class="comedy-grid" id="comedyGrid">
+
+
+                    <!-- Comedy 1 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy1.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy1.webp"
+                                 alt="Stand Up Comedy Night">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Stand Up Comedy Night</h3>
+
+                            <p>Stand Up / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comedy 2 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy2.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy2.jpg"
+                                 alt="Tamil Comedy Show">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Tamil Comedy Show</h3>
+
+                            <p>Tamil / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comedy 3 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy3.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy3.webp"
+                                 alt="Open Mic Comedy">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Open Mic Comedy</h3>
+
+                            <p>Open Mic / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comedy 4 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy4.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy4.jpg"
+                                 alt="Comedy Festival">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Comedy Festival</h3>
+
+                            <p>Festival / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comedy 5 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy5.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy5.jpg"
+                                 alt="Stand Up Comedy">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Stand Up Comedy</h3>
+
+                            <p>Stand Up / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comedy 6 -->
+
+                    <div class="comedy-card searchable-card"
+                         onclick="openComedy('comedy6.html')">
+
+                        <div class="comedy-image">
+
+                            <img src="images/comedy6.webp"
+                                 alt="Comedy Show">
+
+                        </div>
+
+                        <div class="comedy-details">
+
+                            <h3>Comedy Show</h3>
+
+                            <p>Tamil / Comedy</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="comedy-next" onclick="scrollComedy()">
+                    ›
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6. Kids & Family -->
+
+    <section class="kids-section" id="kids-section">
+
+        <div class="kids-container">
+
+            <div class="section-title-bar">
+
+                <h2>Kids & Family</h2>
+
+                <a href="kids.html" class="see-all">
+                    See All &gt;
+                </a>
+
+            </div>
+
+            <div class="kids-grid">
+
+
+                <!-- Kids 1 -->
+
+                <div class="kids-card searchable-card"
+                     onclick="openKidsMovie('kids-movie.html')">
+
+                    <div class="kids-image">
+
+                        <img src="images/kids1.webp"
+                             alt="Kids Adventure">
+
+                        <span class="play-icon">▶</span>
+
+                    </div>
+
+                    <div class="kids-details">
+
+                        <h3>Kids Adventure</h3>
+
+                        <p>Animation / Family</p>
+
+                        <span class="watch-label">
+                            ▶ Watch & Book
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Kids 2 -->
+
+                <div class="kids-card searchable-card"
+                     onclick="openKidsMovie('kids-movie2.html')">
+
+                    <div class="kids-image">
+
+                        <img src="images/kids1.jfif"
+                             alt="Animal World">
+
+                        <span class="play-icon">▶</span>
+
+                    </div>
+
+                    <div class="kids-details">
+
+                        <h3>Animal World</h3>
+
+                        <p>Animation / Adventure</p>
+
+                        <span class="watch-label">
+                            ▶ Watch & Book
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Kids 3 -->
+
+                <div class="kids-card searchable-card"
+                     onclick="openKidsMovie('kids-movie3.html')">
+
+                    <div class="kids-image">
+
+                        <img src="images/kids3.png"
+                             alt="Magic World">
+
+                        <span class="play-icon">▶</span>
+
+                    </div>
+
+                    <div class="kids-details">
+
+                        <h3>Magic World</h3>
+
+                        <p>Fantasy / Family</p>
+
+                        <span class="watch-label">
+                            ▶ Watch & Book
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Kids 4 -->
+
+                <div class="kids-card searchable-card"
+                     onclick="openKidsMovie('kids-movie4.html')">
+
+                    <div class="kids-image">
+
+                        <img src="images/kids4.jfif"
+                             alt="Super Kids">
+
+                        <span class="play-icon">▶</span>
+
+                    </div>
+
+                    <div class="kids-details">
+
+                        <h3>Super Kids</h3>
+
+                        <p>Action / Animation</p>
+
+                        <span class="watch-label">
+                            ▶ Watch & Book
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7. Music & Concerts -->
+
+    <section class="concert-section" id="concert-section">
+
+        <div class="concert-container">
+
+            <div class="concert-heading">
+
+                <h2>Music & Concerts</h2>
+
+                <a href="concerts.html" class="concert-see-all">
+                    Explore All →
+                </a>
+
+            </div>
+
+            <div class="concert-grid">
+
+
+                <!-- Concert 1 -->
+
+                <div class="concert-card searchable-card"
+                     onclick="openConcert('concert1.html')">
+
+                    <div class="concert-image">
+
+                        <img src="images/music1.jpg"
+                             alt="Summer Music Festival">
+
+                    </div>
+
+                    <div class="concert-content">
+
+                        <span class="concert-type">
+                            MUSIC FESTIVAL
+                        </span>
+
+                        <h3>Summer Music Festival</h3>
+
+                        <p>🎤 Live Music</p>
+
+                        <button onclick="event.stopPropagation(); openConcert('concert1.html')">
+                            View Event →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Concert 2 -->
+
+                <div class="concert-card searchable-card"
+                     onclick="openConcert('concert2.html')">
+
+                    <div class="concert-image">
+
+                        <img src="images/music2.webp"
+                             alt="Rock Concert">
+
+                    </div>
+
+                    <div class="concert-content">
+
+                        <span class="concert-type">
+                            LIVE MUSIC
+                        </span>
+
+                        <h3>Rock Concert</h3>
+
+                        <p>🎸 Rock / Live Performance</p>
+
+                        <button onclick="event.stopPropagation(); openConcert('concert2.html')">
+                            View Event →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Concert 3 -->
+
+                <div class="concert-card searchable-card"
+                     onclick="openConcert('concert3.html')">
+
+                    <div class="concert-image">
+
+                        <img src="images/music3.avif"
+                             alt="DJ Night">
+
+                    </div>
+
+                    <div class="concert-content">
+
+                        <span class="concert-type">
+                            DJ EVENT
+                        </span>
+
+                        <h3>DJ Night</h3>
+
+                        <p>🎧 Electronic / DJ</p>
+
+                        <button onclick="event.stopPropagation(); openConcert('concert3.html')">
+                            View Event →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Concert 4 -->
+
+                <div class="concert-card searchable-card"
+                     onclick="openConcert('concert4.html')">
+
+                    <div class="concert-image">
+
+                        <img src="images/music4.jpg"
+                             alt="Classical Music Concert">
+
+                    </div>
+
+                    <div class="concert-content">
+
+                        <span class="concert-type">
+                            SPECIAL EVENT
+                        </span>
+
+                        <h3>Classical Music Concert</h3>
+
+                        <p>🎼 Classical / Instrumental</p>
+
+                        <button onclick="event.stopPropagation(); openConcert('concert4.html')">
+                            View Event →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8. Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- About -->
+
+            <div class="footer-column">
+
+                <h3>BookMyShow Clone</h3>
+
+                <p>
+                    Book your favourite movies,
+                    events, plays and experiences
+                    online with ease.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h4>Quick Links</h4>
+
+                <a href="#movies-section">Movies</a>
+
+                <a href="concerts.html">Events</a>
+
+                <a href="#" onclick="comingSoon(event)">Plays</a>
+
+                <a href="#" onclick="comingSoon(event)">Sports</a>
+
+                <a href="#kids-section">Entertainment</a>
+
+            </div>
+
+
+            <!-- Support -->
+
+            <div class="footer-column">
+
+                <h4>Support</h4>
+
+                <a href="#" onclick="comingSoon(event)">Help Center</a>
+
+                <a href="#" onclick="comingSoon(event)">Contact Us</a>
+
+                <a href="#" onclick="comingSoon(event)">Terms & Conditions</a>
+
+                <a href="#" onclick="comingSoon(event)">Privacy Policy</a>
+
+                <a href="#" onclick="comingSoon(event)">Cancellation Policy</a>
+
+            </div>
+
+
+            <!-- Social -->
+
+            <div class="footer-column">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-links">
+
+                    <a href="#" onclick="comingSoon(event)">Facebook</a>
+                    <a href="#" onclick="comingSoon(event)">Instagram</a>
+                    <a href="#" onclick="comingSoon(event)">Twitter</a>
+                    <a href="#" onclick="comingSoon(event)">YouTube</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 BookMyShow Clone. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

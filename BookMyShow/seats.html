@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Select Seats - Movie Hub</title>
+
+    <link
+        rel="stylesheet"
+        href="seats.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="seat-header">
+
+    <div class="header-container">
+
+        <button
+            class="back-btn"
+            onclick="goBack()"
+        >
+            &#10094;
+        </button>
+
+
+        <div class="movie-title">
+
+            <h1 id="movieName">
+                Jana Nayagan
+            </h1>
+
+            <p id="showDetails">
+                Coimbatore
+            </p>
+
+        </div>
+    </div>
+
+</header>
+
+
+
+<!-- BOOKING INFORMATION -->
+
+<section class="booking-info">
+
+    <div class="info-box">
+
+        <span>Movie</span>
+
+        <strong id="movieDisplay">
+            Jana Nayagan
+        </strong>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <span>Date</span>
+
+        <strong id="dateDisplay">
+            25 Sat
+        </strong>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <span>Theatre</span>
+
+        <strong id="theatreDisplay">
+            Not Selected
+        </strong>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <span>Time</span>
+
+        <strong id="timeDisplay">
+            Not Selected
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- SEAT SECTION -->
+
+<main class="seat-section">
+
+    <h2>Select Your Seats</h2>
+
+    <p class="seat-subtitle">
+        Please select your preferred seats
+    </p>
+
+
+    <!-- SCREEN -->
+
+    <div class="screen-area">
+
+        <div class="screen">
+            SCREEN
+        </div>
+
+        <p>
+            All eyes this way
+        </p>
+
+    </div>
+
+
+
+    <!-- SEATS -->
+
+    <div class="seat-layout">
+
+
+        <!-- ROW A -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                A
+            </span>
+
+            <button class="seat" data-seat="A1">1</button>
+            <button class="seat" data-seat="A2">2</button>
+            <button class="seat" data-seat="A3">3</button>
+            <button class="seat" data-seat="A4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="A5">5</button>
+            <button class="seat" data-seat="A6">6</button>
+            <button class="seat" data-seat="A7">7</button>
+            <button class="seat" data-seat="A8">8</button>
+
+        </div>
+
+
+
+        <!-- ROW B -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                B
+            </span>
+
+            <button class="seat" data-seat="B1">1</button>
+            <button class="seat" data-seat="B2">2</button>
+            <button class="seat" data-seat="B3">3</button>
+            <button class="seat" data-seat="B4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="B5">5</button>
+            <button class="seat" data-seat="B6">6</button>
+            <button class="seat" data-seat="B7">7</button>
+            <button class="seat" data-seat="B8">8</button>
+
+        </div>
+
+
+
+        <!-- ROW C -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                C
+            </span>
+
+            <button class="seat" data-seat="C1">1</button>
+            <button class="seat" data-seat="C2">2</button>
+            <button class="seat" data-seat="C3">3</button>
+            <button class="seat" data-seat="C4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="C5">5</button>
+            <button class="seat" data-seat="C6">6</button>
+            <button class="seat" data-seat="C7">7</button>
+            <button class="seat" data-seat="C8">8</button>
+
+        </div>
+
+
+
+        <!-- ROW D -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                D
+            </span>
+
+            <button class="seat" data-seat="D1">1</button>
+            <button class="seat" data-seat="D2">2</button>
+            <button class="seat" data-seat="D3">3</button>
+            <button class="seat" data-seat="D4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="D5">5</button>
+            <button class="seat" data-seat="D6">6</button>
+            <button class="seat" data-seat="D7">7</button>
+            <button class="seat" data-seat="D8">8</button>
+
+        </div>
+
+
+
+        <!-- ROW E -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                E
+            </span>
+
+            <button class="seat" data-seat="E1">1</button>
+            <button class="seat" data-seat="E2">2</button>
+            <button class="seat" data-seat="E3">3</button>
+            <button class="seat" data-seat="E4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="E5">5</button>
+            <button class="seat" data-seat="E6">6</button>
+            <button class="seat" data-seat="E7">7</button>
+            <button class="seat" data-seat="E8">8</button>
+
+        </div>
+
+
+
+        <!-- ROW F -->
+
+        <div class="seat-row">
+
+            <span class="row-name">
+                F
+            </span>
+
+            <button class="seat" data-seat="F1">1</button>
+            <button class="seat" data-seat="F2">2</button>
+            <button class="seat" data-seat="F3">3</button>
+            <button class="seat" data-seat="F4">4</button>
+
+            <span class="seat-gap"></span>
+
+            <button class="seat" data-seat="F5">5</button>
+            <button class="seat" data-seat="F6">6</button>
+            <button class="seat" data-seat="F7">7</button>
+            <button class="seat" data-seat="F8">8</button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SEAT LEGEND -->
+
+    <div class="seat-legend">
+
+        <div class="legend-item">
+
+            <span class="legend-box available"></span>
+
+            <span>Available</span>
+
+        </div>
+
+
+        <div class="legend-item">
+
+            <span class="legend-box selected"></span>
+
+            <span>Selected</span>
+
+        </div>
+
+
+        <div class="legend-item">
+
+            <span class="legend-box occupied"></span>
+
+            <span>Occupied</span>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- BOOKING SUMMARY -->
+
+<section class="selection-summary">
+
+    <div class="summary-content">
+
+        <div>
+
+            <h3>
+                Selected Seats
+            </h3>
+
+            <p id="selectedSeats">
+                No seats selected
+            </p>
+
+        </div>
+
+
+        <div class="price-section">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="totalPrice">
+                $0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="continue-btn"
+            onclick="continueToPayment()"
+        >
+
+            Continue
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="seats.js"></script>
+
+
+</body>
+
+</html>

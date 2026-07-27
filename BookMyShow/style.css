@@ -1,0 +1,3006 @@
+/* =================================
+   BASE RESETS & VARIABLES
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+
+/* =================================
+   COMMON CONTAINER
+================================== */
+
+.header-container,
+.subnav-container,
+.promo-container,
+.movies-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* =================================
+   1. MAIN HEADER
+================================== */
+
+.header {
+    background-color: #ffffff;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =================================
+   LOGO
+================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+
+/* =================================
+   SEARCH BAR
+================================== */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+
+    padding: 8px 14px;
+
+    width: 550px;
+    max-width: 100%;
+}
+
+.search-icon {
+    color: #999999;
+    margin-right: 12px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+
+    width: 100%;
+
+    font-size: 14px;
+    color: #333333;
+
+    background: transparent;
+}
+
+
+/* =================================
+   RIGHT SIDE CONTROLS
+================================== */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =================================
+   LOCATION PICKER
+================================== */
+
+.location-picker {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =================================
+   LOCATION BUTTON
+================================== */
+
+.location-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: transparent;
+    border: none;
+
+    color: #333333;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    padding: 8px 6px;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.location-btn:hover {
+    color: #f84464;
+}
+
+
+/* =================================
+   LOCATION ICON
+================================== */
+
+.location-btn .fa-location-dot {
+    color: #f84464;
+    font-size: 14px;
+}
+
+
+/* =================================
+   LOCATION ARROW
+================================== */
+
+.arrow-icon {
+    font-size: 10px;
+    color: #666666;
+
+    margin-left: 2px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* Arrow rotates when dropdown opens */
+
+.location-picker.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+
+/* =================================
+   LOCATION DROPDOWN
+================================== */
+
+.location-dropdown {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 210px;
+
+    background-color: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.18);
+
+    padding: 8px 0;
+
+    display: none;
+
+    z-index: 9999;
+
+    overflow: hidden;
+}
+
+
+/* Show dropdown */
+
+.location-dropdown.show {
+    display: block;
+}
+
+
+/* =================================
+   LOCATION DROPDOWN TITLE
+================================== */
+
+.location-title {
+    padding: 10px 15px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #777777;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =================================
+   LOCATION CITY BUTTONS
+================================== */
+
+.location-dropdown button {
+    width: 100%;
+
+    padding: 11px 15px;
+
+    background-color: #ffffff;
+
+    border: none;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* City hover */
+
+.location-dropdown button:hover {
+    background-color: #f8f8f8;
+    color: #f84464;
+}
+
+
+/* =================================
+   SIGN IN BUTTON
+================================== */
+
+.btn-signin {
+    background-color: #f84464;
+    color: #ffffff;
+
+    border: none;
+    padding: 7px 17px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-signin:hover {
+    background-color: #e23351;
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   SIGN IN WRAPPER
+================================== */
+
+.signin-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =================================
+   SIGN IN DROPDOWN
+================================== */
+
+.signin-dropdown {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 300px;
+
+    background: #ffffff;
+
+    padding: 24px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    display: none;
+
+    z-index: 99999;
+
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   SHOW SIGN IN DROPDOWN
+================================== */
+
+.signin-dropdown.show {
+    display: block;
+}
+
+
+/* =================================
+   SIGN IN TITLE
+================================== */
+
+.signin-dropdown h3 {
+    margin: 0 0 18px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #222222;
+}
+
+
+/* =================================
+   LOGIN INPUTS
+================================== */
+
+.signin-dropdown input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    color: #333333;
+
+    background-color: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* INPUT PLACEHOLDER */
+
+.signin-dropdown input::placeholder {
+    color: #999999;
+}
+
+
+/* INPUT FOCUS */
+
+.signin-dropdown input:focus {
+    border-color: #f84464;
+
+    box-shadow:
+        0 0 0 2px rgba(248, 68, 100, 0.10);
+}
+
+
+/* =================================
+   LOGIN BUTTON
+================================== */
+
+.login-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #d93655;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   LOGIN MESSAGE
+================================== */
+
+#loginMessage {
+    margin: 12px 0 0;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #666666;
+}
+
+
+/* =================================
+   MENU WRAPPER
+================================== */
+
+.menu-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =================================
+   MENU DROPDOWN
+================================== */
+
+.menu-dropdown {
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    right: 0;
+
+    width: 210px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    padding: 8px 0;
+
+    display: none;
+
+    z-index: 99999;
+
+    overflow: hidden;
+}
+
+
+/* SHOW MENU */
+
+.menu-dropdown.show {
+    display: block;
+}
+
+
+/* =================================
+   MENU LINKS
+================================== */
+
+.menu-dropdown a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 16px;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.menu-dropdown a i {
+    width: 18px;
+
+    color: #666666;
+
+    text-align: center;
+}
+
+
+.menu-dropdown a:hover {
+    background-color: #f7f7f7;
+
+    color: #f84464;
+}
+
+
+.menu-dropdown a:hover i {
+    color: #f84464;
+}
+
+
+/* =================================
+   MENU ICON
+================================== */
+
+.menu-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    color: #333333;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.menu-icon:hover {
+    background-color: #f5f5f5;
+    color: #f84464;
+    transform: scale(1.05);
+}
+
+
+/* =================================
+   2. SUB-NAVIGATION
+================================== */
+
+.subnav {
+    background-color: #1f2533;
+    padding: 10px 0;
+}
+
+.subnav-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+
+    color: #cccccc;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ffffff;
+}
+
+.secondary-menu a {
+    font-size: 12px;
+}
+
+
+/* =================================
+   3. BANNER SLIDER
+================================== */
+
+.banner-section {
+    background: #ebebeb;
+
+    padding: 15px 0 20px;
+}
+
+.banner-slider {
+    width: 90%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.banner {
+    display: none;
+
+    width: 100%;
+}
+
+.banner.active {
+    display: block;
+}
+
+.banner img {
+    width: 100%;
+
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* =================================
+   SLIDER BUTTONS
+================================== */
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 48px;
+
+    border: none;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.previous {
+    left: 0;
+
+    border-radius: 0 4px 4px 0;
+}
+
+.next {
+    right: 0;
+
+    border-radius: 4px 0 0 4px;
+}
+
+
+/* =================================
+   BANNER DOTS
+================================== */
+
+.dots {
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 20;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.active-dot {
+    background: #ffffff;
+
+    transform: scale(1.3);
+}
+
+
+/* =================================
+   4. PROMOTIONAL BANNER
+================================== */
+
+.promo-section {
+    margin: 20px 0;
+}
+
+.promo-container img {
+    width: 100%;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+/* =================================
+   5. MOVIES
+================================== */
+
+.movies-section {
+    padding: 10px 0 50px;
+
+    background-color: #f5f5f5;
+}
+
+
+/* =================================
+   MOVIES CONTAINER
+================================== */
+
+.movies-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+/* =================================
+   SECTION TITLE
+================================== */
+
+.section-title-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.section-title-bar h2 {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+.see-all {
+    text-decoration: none;
+
+    color: #0066cc;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.see-all:hover {
+    color: #f84464;
+}
+
+
+/* =================================
+   MOVIE SLIDER WRAPPER
+================================== */
+
+.movies-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =================================
+   MOVIE GRID
+================================== */
+
+.movies-grid {
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding: 0 0 5px;
+}
+
+.movies-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =================================
+   MOVIE CARD
+================================== */
+
+.movie-card {
+    flex: 0 0 calc((100% - 80px) / 5);
+
+    cursor: pointer;
+
+    min-width: 0;
+}
+
+
+/* =================================
+   POSTER BOX
+================================== */
+
+.poster-box {
+    position: relative;
+
+    width: 100%;
+
+    height: 360px;
+
+    background-color: #e0e0e0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   POSTER IMAGE
+================================== */
+
+.poster-box img {
+    width: 100%;
+
+    height: 110%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .poster-box img {
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   PROMOTED BADGE
+================================== */
+
+.badge-promoted {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    background-color: #f84464;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    padding: 3px 6px;
+
+    border-radius: 3px;
+
+    z-index: 2;
+}
+
+
+/* =================================
+   MOVIE TITLE
+================================== */
+
+.movie-title {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+    margin-top: 10px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =================================
+   MOVIE GENRE
+================================== */
+
+.movie-genre {
+    font-size: 13px;
+
+    color: #666666;
+
+    margin-top: 4px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =================================
+   MOVIE ARROWS
+================================== */
+
+.movie-prev,
+.movie-next {
+    position: absolute;
+
+    top: 45%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #333333;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    font-weight: 300;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+.movie-prev {
+    left: -20px;
+}
+
+.movie-next {
+    right: -20px;
+}
+
+.movie-next:hover,
+.movie-prev:hover {
+    background-color: #222222;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* =================================
+   MOVIE RESPONSIVE
+================================== */
+
+@media (max-width: 1100px) {
+
+    .movies-container {
+        max-width: 95%;
+    }
+
+    .movie-card {
+        flex: 0 0 calc((100% - 60px) / 4);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .movie-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+
+    .poster-box {
+        height: 320px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .movie-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+    .poster-box {
+        height: 280px;
+    }
+
+    .movie-next {
+        right: -10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .movie-card {
+        flex: 0 0 80%;
+    }
+
+    .poster-box {
+        height: 300px;
+    }
+
+}
+
+
+/* =================================
+   COMEDY SHOWS
+================================== */
+
+.comedy-section {
+    background: #f5f5f5;
+
+    padding: 40px 0 55px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.comedy-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+}
+
+
+/* =================================
+   COMEDY TITLE
+================================== */
+
+.comedy-section .section-title-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.comedy-section .section-title-bar h2 {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+    margin: 0;
+}
+
+.comedy-section .see-all {
+    text-decoration: none;
+
+    color: #0066cc;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.comedy-section .see-all:hover {
+    color: #f84464;
+}
+
+
+/* =================================
+   COMEDY SLIDER
+================================== */
+
+.comedy-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.comedy-grid {
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding: 0 0 8px;
+}
+
+.comedy-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =================================
+   COMEDY CARD
+================================== */
+
+.comedy-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.comedy-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =================================
+   COMEDY IMAGE
+================================== */
+
+.comedy-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 285px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    border-radius: 10px 10px 0 0;
+}
+
+.comedy-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.comedy-card:hover .comedy-image img {
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   COMEDY BADGE
+================================== */
+
+.comedy-badge {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+/* =================================
+   COMEDY DETAILS
+================================== */
+
+.comedy-details {
+    padding: 15px;
+}
+
+.comedy-details h3 {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+    margin: 0 0 7px;
+}
+
+.comedy-details p {
+    font-size: 13px;
+
+    color: #666666;
+
+    margin: 0;
+}
+
+
+/* =================================
+   COMEDY ARROWS
+================================== */
+
+.comedy-prev,
+.comedy-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #333333;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.25);
+
+    transition: 0.2s ease;
+}
+
+.comedy-prev {
+    left: -20px;
+}
+
+.comedy-next {
+    right: -20px;
+}
+
+.comedy-prev:hover,
+.comedy-next:hover {
+    background: #222222;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* =================================
+   COMEDY TABLET
+================================== */
+
+@media (max-width: 1000px) {
+
+    .comedy-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+
+    .comedy-image {
+        height: 270px;
+    }
+
+}
+
+
+/* =================================
+   COMEDY MOBILE
+================================== */
+
+@media (max-width: 700px) {
+
+    .comedy-container {
+        padding: 0 15px;
+    }
+
+    .comedy-grid {
+        gap: 15px;
+    }
+
+    .comedy-card {
+        flex: 0 0 calc((100% - 15px) / 2);
+    }
+
+    .comedy-image {
+        height: 230px;
+    }
+
+    .comedy-details {
+        padding: 12px;
+    }
+
+    .comedy-details h3 {
+        font-size: 16px;
+    }
+
+    .comedy-details p {
+        font-size: 12px;
+    }
+
+    .comedy-prev {
+        left: -10px;
+    }
+
+    .comedy-next {
+        right: -10px;
+    }
+
+}
+
+
+/* =================================
+   COMEDY SMALL MOBILE
+================================== */
+
+@media (max-width: 450px) {
+
+    .comedy-card {
+        flex: 0 0 80%;
+    }
+
+    .comedy-image {
+        height: 240px;
+    }
+
+}
+
+
+/* =================================
+   7. KIDS & FAMILY
+================================== */
+
+.kids-section {
+    background-color: #f5f5f5;
+
+    padding: 45px 0 55px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.kids-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+}
+
+
+/* =================================
+   KIDS HEADER
+================================== */
+
+.kids-section .section-title-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.kids-section .section-title-bar h2 {
+    margin: 0;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.kids-section .see-all {
+    text-decoration: none;
+
+    color: #0066cc;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.kids-section .see-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   KIDS GRID
+================================== */
+
+.kids-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =================================
+   KIDS CARD
+================================== */
+
+.kids-card {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e2e2;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.kids-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =================================
+   KIDS IMAGE
+================================== */
+
+.kids-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    background-color: #dddddd;
+}
+
+.kids-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.kids-card:hover .kids-image img {
+    transform: scale(1.04);
+}
+
+
+/* =================================
+   PLAY ICON
+================================== */
+
+.play-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgba(248, 68, 100, 0.95);
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    padding-left: 3px;
+
+    opacity: 0;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.kids-card:hover .play-icon {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.05);
+}
+
+
+/* =================================
+   KIDS DETAILS
+================================== */
+
+.kids-details {
+    padding: 14px 15px 17px;
+
+    background-color: #ffffff;
+}
+
+.kids-details h3 {
+    margin: 0 0 6px;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.kids-details p {
+    margin: 0 0 12px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: #666666;
+}
+
+
+/* =================================
+   WATCH & BOOK
+================================== */
+
+.watch-label {
+    display: inline-block;
+
+    background-color: #f84464;
+
+    color: #ffffff;
+
+    padding: 7px 11px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.kids-card:hover .watch-label {
+    background-color: #d93655;
+}
+
+
+/* =================================
+   KIDS TABLET
+================================== */
+
+@media (max-width: 1000px) {
+
+    .kids-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .kids-image {
+        height: 260px;
+    }
+
+}
+
+
+/* =================================
+   KIDS MOBILE
+================================== */
+
+@media (max-width: 600px) {
+
+    .kids-section {
+        padding: 30px 0 40px;
+    }
+
+    .kids-container {
+        padding: 0 15px;
+    }
+
+    .kids-section .section-title-bar {
+        margin-bottom: 16px;
+    }
+
+    .kids-section .section-title-bar h2 {
+        font-size: 21px;
+    }
+
+    .kids-section .see-all {
+        font-size: 12px;
+    }
+
+    .kids-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .kids-image {
+        height: 180px;
+    }
+
+    .kids-details {
+        padding: 10px;
+    }
+
+    .kids-details h3 {
+        font-size: 14px;
+
+        margin-bottom: 5px;
+    }
+
+    .kids-details p {
+        font-size: 11px;
+
+        margin-bottom: 8px;
+    }
+
+    .watch-label {
+        font-size: 10px;
+
+        padding: 5px 7px;
+    }
+
+    .play-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =================================
+   8. MUSIC & CONCERTS
+================================== */
+
+.concert-section {
+    background: #f5f5f5;
+
+    padding: 45px 0 55px;
+}
+
+.concert-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+}
+
+
+/* =================================
+   CONCERT HEADING
+================================== */
+
+.concert-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: block;
+
+    color: #f84464;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+}
+
+.concert-heading h2 {
+    font-size: 25px;
+
+    color: #222;
+
+    margin-bottom: 6px;
+}
+
+.concert-heading p {
+    font-size: 14px;
+
+    color: #777;
+}
+
+.concert-see-all {
+    color: #f84464;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.concert-see-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   CONCERT GRID
+================================== */
+
+.concert-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =================================
+   CONCERT CARD
+================================== */
+
+.concert-card {
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e5e5;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.concert-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =================================
+   CONCERT IMAGE
+================================== */
+
+.concert-image {
+    position: relative;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    background: #ddd;
+
+    border-radius: 100%;
+
+    margin: 10px auto 0;
+
+    width: 90%;
+}
+
+.concert-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.concert-card:hover .concert-image img {
+    transform: scale(1.08);
+}
+
+
+/* =================================
+   DATE BADGE
+================================== */
+
+.concert-date {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: 48px;
+
+    padding: 6px 4px;
+
+    background: #ffffff;
+
+    color: #f84464;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.concert-date strong {
+    display: block;
+
+    font-size: 19px;
+
+    color: #222;
+
+    margin-top: 2px;
+}
+
+
+/* =================================
+   LIVE BADGE
+================================== */
+
+.live-badge {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   CONCERT CONTENT
+================================== */
+
+.concert-content {
+    padding: 15px;
+}
+
+.concert-type {
+    color: #f84464;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.concert-content h3 {
+    font-size: 17px;
+
+    color: #222;
+
+    margin: 7px 0 10px;
+}
+
+.concert-content p {
+    font-size: 13px;
+
+    color: #666;
+
+    margin: 6px 0;
+}
+
+
+/* =================================
+   VIEW EVENT BUTTON
+================================== */
+
+.concert-content button {
+    margin-top: 10px;
+
+    width: 100%;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #f84464;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.concert-content button:hover {
+    background: #d93655;
+}
+
+
+/* =================================
+   CONCERT TABLET
+================================== */
+
+@media (max-width: 1000px) {
+
+    .concert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   CONCERT MOBILE
+================================== */
+
+@media (max-width: 600px) {
+
+    .concert-section {
+        padding: 30px 0 40px;
+    }
+
+    .concert-container {
+        padding: 0 15px;
+    }
+
+    .concert-heading {
+        align-items: flex-start;
+    }
+
+    .concert-heading h2 {
+        font-size: 21px;
+    }
+
+    .concert-heading p {
+        font-size: 12px;
+    }
+
+    .concert-see-all {
+        font-size: 12px;
+    }
+
+    .concert-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .concert-image {
+        height: 190px;
+    }
+
+    .concert-content {
+        padding: 10px;
+    }
+
+    .concert-content h3 {
+        font-size: 14px;
+    }
+
+    .concert-content p {
+        font-size: 11px;
+    }
+
+    .concert-content button {
+        font-size: 11px;
+
+        padding: 8px;
+    }
+
+}
+
+
+/* =================================
+   FOOTER
+================================== */
+
+.footer {
+    background: #333545;
+
+    color: #ffffff;
+
+    margin-top: 0;
+}
+
+.footer-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.5fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-column h3 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+}
+
+.footer-column p {
+    color: #b5b5b5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 300px;
+}
+
+.footer-column a {
+    display: block;
+
+    color: #b5b5b5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.social-links a {
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a4b5c;
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   RESPONSIVE HEADER
+================================== */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+        gap: 12px;
+    }
+
+    .header-left {
+        gap: 18px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .location-btn {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE FOOTER
+================================== */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 8px 0;
+    }
+
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .header-left {
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 58px;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 7px 10px;
+    }
+
+    .header-right {
+        gap: 5px;
+    }
+
+    .location-btn {
+        padding: 7px 4px;
+        font-size: 12px;
+    }
+
+    .location-btn .fa-location-dot {
+        font-size: 12px;
+    }
+
+    .btn-signin {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 17px;
+    }
+
+    .location-dropdown {
+        width: 190px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .header-left {
+        flex: 1;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 50px;
+    }
+
+    .search-bar {
+        padding: 6px 8px;
+    }
+
+    .search-icon {
+        margin-right: 7px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .location-btn span:not(.arrow-icon) {
+        display: none;
+    }
+
+    .location-btn {
+        gap: 4px;
+    }
+
+    .btn-signin {
+        display: none;
+    }
+
+    .location-dropdown {
+        right: -20px;
+        width: 180px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 35px 20px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column p {
+        margin: auto;
+    }
+
+}
+
+/* =================================
+   PROFILE / BOOKING HEADER
+================================= */
+
+.profile-header {
+
+    height: 64px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.profile-logo {
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #f84464;
+
+}
+
+
+.profile-logo span {
+
+    font-weight: 400;
+
+}
+
+
+.back-home {
+
+    text-decoration: none;
+
+    color: #333333;
+
+    font-size: 14px;
+
+}
+
+
+.back-home:hover {
+
+    color: #f84464;
+
+}
+
+
+/* =================================
+   PROFILE PAGE
+================================= */
+
+.profile-page {
+
+    min-height: calc(100vh - 64px);
+
+    background: #f5f5f5;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.profile-card {
+
+    width: 420px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.profile-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+}
+
+
+.profile-card h1 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    color: #222222;
+
+}
+
+
+.profile-subtitle {
+
+    color: #777777;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =================================
+   PROFILE DETAILS
+================================= */
+
+.profile-details {
+
+    text-align: left;
+
+}
+
+
+.profile-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.profile-row > i {
+
+    width: 35px;
+
+    color: #f84464;
+
+    font-size: 18px;
+
+    text-align: center;
+
+}
+
+
+.profile-row div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.profile-row span {
+
+    font-size: 11px;
+
+    color: #888888;
+
+}
+
+
+.profile-row strong {
+
+    font-size: 14px;
+
+    color: #333333;
+
+}
+
+
+/* =================================
+   PROFILE BUTTONS
+================================= */
+
+.edit-profile-btn,
+.logout-btn {
+
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.edit-profile-btn {
+
+    border: 1px solid #f84464;
+
+    background: #ffffff;
+
+    color: #f84464;
+
+}
+
+
+.edit-profile-btn:hover {
+
+    background: #fff0f2;
+
+}
+
+
+.logout-btn {
+
+    border: none;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #d93655;
+
+}
+
+
+/* =================================
+   BOOKINGS PAGE
+================================= */
+
+.bookings-page {
+
+    min-height: calc(100vh - 64px);
+
+    background: #f5f5f5;
+
+    padding: 40px 7%;
+
+}
+
+
+.bookings-page h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    color: #222222;
+
+}
+
+
+.booking-subtitle {
+
+    margin-top: 8px;
+
+    color: #777777;
+
+    font-size: 14px;
+
+}
+
+
+/* =================================
+   BOOKING CARD
+================================= */
+
+.booking-card {
+
+    margin-top: 30px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+
+}
+
+
+.booking-image img {
+
+    width: 120px;
+
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+}
+
+
+.booking-info {
+
+    flex: 1;
+
+}
+
+
+.booking-info h2 {
+
+    margin: 0 0 12px;
+
+    font-size: 20px;
+
+    color: #222222;
+
+}
+
+
+.booking-info p {
+
+    margin: 8px 0;
+
+    font-size: 13px;
+
+    color: #666666;
+
+}
+
+
+.booking-info p i {
+
+    width: 20px;
+
+    color: #f84464;
+
+}
+
+
+.booking-status {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    background: #e8f7ed;
+
+    color: #219653;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* =================================
+   BOOKING PRICE
+================================= */
+
+.booking-price {
+
+    min-width: 120px;
+
+    text-align: center;
+
+}
+
+
+.booking-price span {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #888888;
+
+}
+
+
+.booking-price strong {
+
+    display: block;
+
+    margin: 5px 0 15px;
+
+    font-size: 18px;
+
+    color: #222222;
+
+}
+
+
+.booking-price button {
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+}
+
+
+.booking-price button:hover {
+
+    background: #d93655;
+
+}
+
+
+/* =================================
+   NO BOOKING
+================================= */
+
+.no-booking {
+
+    margin-top: 30px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+
+.no-booking i {
+
+    font-size: 40px;
+
+    color: #f84464;
+
+}
+
+
+.no-booking h2 {
+
+    margin: 15px 0 5px;
+
+    font-size: 20px;
+
+}
+
+
+.no-booking p {
+
+    color: #777777;
+
+    font-size: 13px;
+
+}
+
+
+.no-booking a {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    background: #f84464;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .booking-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .booking-price {
+
+        width: 100%;
+
+        text-align: left;
+
+    }
+
+}

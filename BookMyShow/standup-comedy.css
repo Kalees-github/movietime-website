@@ -1,0 +1,432 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* HEADER */
+
+.details-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 0;
+}
+
+.header-container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.location {
+    font-size: 14px;
+}
+
+.signin-btn {
+    border: none;
+    background: #f84464;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* BACK BUTTON */
+
+.back-container {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.back-btn {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #444;
+}
+
+.back-btn:hover {
+    color: #f84464;
+}
+
+/* DETAILS SECTION */
+
+.comedy-details-section {
+    background: white;
+    padding: 35px 0;
+}
+
+.details-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 45px;
+}
+
+/* POSTER */
+
+.comedy-poster {
+    width: 350px;
+    height: 420px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ddd;
+}
+
+.comedy-poster img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFORMATION */
+
+.comedy-info {
+    padding-top: 10px;
+}
+
+.live-label {
+    display: inline-block;
+    background: #f84464;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.comedy-info h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.category {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+/* EVENT INFO */
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    background: #fff0f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.info-item strong {
+    font-size: 14px;
+}
+
+.info-item p {
+    margin-top: 4px;
+    color: #555;
+}
+
+/* BOOKING SECTION */
+
+.booking-section {
+    padding: 35px 0 60px;
+}
+
+.booking-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.booking-container h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.booking-container h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* DATE */
+
+.date-section {
+    margin-bottom: 35px;
+}
+
+.date-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.date-card {
+    min-width: 75px;
+    padding: 12px 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.date-card span {
+    font-size: 11px;
+    color: #777;
+}
+
+.date-card strong {
+    font-size: 22px;
+}
+
+.date-card small {
+    font-size: 11px;
+    color: #777;
+}
+
+.date-card:hover {
+    border-color: #f84464;
+}
+
+.date-card.active {
+    background: #f84464;
+    color: white;
+    border-color: #f84464;
+}
+
+.date-card.active span,
+.date-card.active small {
+    color: white;
+}
+
+/* TIME */
+
+.time-section {
+    margin-bottom: 35px;
+}
+
+.time-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-btn {
+    background: white;
+    border: 1px solid #aaa;
+    color: #333;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.time-btn:hover {
+    border-color: #f84464;
+    color: #f84464;
+}
+
+.time-btn.active {
+    background: #f84464;
+    border-color: #f84464;
+    color: white;
+}
+
+/* VENUE */
+
+.venue-section {
+    margin-bottom: 35px;
+}
+
+.venue-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 600px;
+}
+
+.venue-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff0f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.venue-card h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.venue-card p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.venue-card span {
+    color: #888;
+    font-size: 13px;
+}
+
+/* BOOKING BOTTOM */
+
+.booking-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price span {
+    font-size: 13px;
+    color: #777;
+}
+
+.price strong {
+    font-size: 25px;
+}
+
+.book-btn {
+    background: #f84464;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background: #d93655;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #1f2533;
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .location {
+        display: none;
+    }
+
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comedy-poster {
+        width: 230px;
+        height: 320px;
+    }
+
+    .comedy-info {
+        width: 100%;
+    }
+
+    .comedy-info h1 {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .booking-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+}

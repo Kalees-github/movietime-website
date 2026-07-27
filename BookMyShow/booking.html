@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="booking-header">
+
+    <div class="header-left">
+
+        <button class="back-button" onclick="goBack()">
+            &#10094;
+        </button>
+
+        <div>
+            <h1 id="bookingMovieTitle">Movie Booking</h1>
+            <p>Select Theatre, Date & Show Time</p>
+        </div>
+
+    </div>
+
+    <span class="search-icon">&#128269;</span>
+
+</header>
+
+
+<!-- DATE SECTION -->
+
+<section class="date-section">
+
+    <h2>Select Date</h2>
+
+    <div class="date-list">
+
+        <button class="date active" onclick="selectDate(this, '25 Sat')">
+            <span>25</span>
+            <small>Sat</small>
+        </button>
+
+        <button class="date" onclick="selectDate(this, '26 Sun')">
+            <span>26</span>
+            <small>Sun</small>
+        </button>
+
+        <button class="date" onclick="selectDate(this, '27 Mon')">
+            <span>27</span>
+            <small>Mon</small>
+        </button>
+
+        <button class="date" onclick="selectDate(this, '28 Tue')">
+            <span>28</span>
+            <small>Tue</small>
+        </button>
+
+        <button class="date" onclick="selectDate(this, '29 Wed')">
+            <span>29</span>
+            <small>Wed</small>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- THEATRE SECTION -->
+
+<main class="theatre-section">
+
+    <h2>Select Theatre</h2>
+
+
+    <!-- THEATRE 1 -->
+
+    <div class="theatre-card">
+
+        <div class="theatre-info">
+
+            <h3>INOX Cinemas</h3>
+            <p>Coimbatore</p>
+
+            <span class="distance">3.2 km</span>
+
+        </div>
+
+        <div class="show-times">
+
+            <button onclick="selectShow(this, '10:30 AM', 'INOX Cinemas')">
+                10:30 AM
+            </button>
+
+            <button onclick="selectShow(this, '1:30 PM', 'INOX Cinemas')">
+                1:30 PM
+            </button>
+
+            <button onclick="selectShow(this, '6:30 PM', 'INOX Cinemas')">
+                6:30 PM
+            </button>
+
+            <button onclick="selectShow(this, '9:30 PM', 'INOX Cinemas')">
+                9:30 PM
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- THEATRE 2 -->
+
+    <div class="theatre-card">
+
+        <div class="theatre-info">
+
+            <h3>KG Cinemas</h3>
+            <p>Coimbatore</p>
+
+            <span class="distance">4.5 km</span>
+
+        </div>
+
+        <div class="show-times">
+
+            <button onclick="selectShow(this, '11:00 AM', 'KG Cinemas')">
+                11:00 AM
+            </button>
+
+            <button onclick="selectShow(this, '3:00 PM', 'KG Cinemas')">
+                3:00 PM
+            </button>
+
+            <button onclick="selectShow(this, '7:30 PM', 'KG Cinemas')">
+                7:30 PM
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- THEATRE 3 -->
+
+    <div class="theatre-card">
+
+        <div class="theatre-info">
+
+            <h3>Broadway Cinemas</h3>
+            <p>Coimbatore</p>
+
+            <span class="distance">5.1 km</span>
+
+        </div>
+
+        <div class="show-times">
+
+            <button onclick="selectShow(this, '10:00 AM', 'Broadway Cinemas')">
+                10:00 AM
+            </button>
+
+            <button onclick="selectShow(this, '2:00 PM', 'Broadway Cinemas')">
+                2:00 PM
+            </button>
+
+            <button onclick="selectShow(this, '8:00 PM', 'Broadway Cinemas')">
+                8:00 PM
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- BOOKING SUMMARY -->
+
+<div class="booking-summary" id="bookingSummary">
+
+    <h2>Booking Summary</h2>
+
+    <p>
+        Movie:
+        <strong id="summaryMovie">Movie</strong>
+    </p>
+
+    <p>
+        Date:
+        <strong id="selectedDate">25 Sat</strong>
+    </p>
+
+    <p>
+        Theatre:
+        <strong id="selectedTheatre">Not Selected</strong>
+    </p>
+
+    <p>
+        Show Time:
+        <strong id="selectedTime">Not Selected</strong>
+    </p>
+
+    <button class="continue-btn" onclick="continueBooking()">
+        Continue
+    </button>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="booking.js"></script>
+
+</body>
+</html>

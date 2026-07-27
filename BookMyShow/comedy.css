@@ -1,0 +1,537 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f2f3f6;
+    color: #222;
+}
+
+
+/* HEADER */
+
+.main-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+
+/* SEARCH */
+
+.header-search {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 0 12px;
+    flex: 0 1 500px;
+    width: 500px;
+    max-width: 500px;
+    min-width: 0;
+    height: 42px;
+}
+
+.header-search span {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.header-search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.header-search input::placeholder {
+    color: #777;
+}
+
+
+/* LOCATION */
+
+.header-location {
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+
+/* SIGN IN */
+
+.signin-btn {
+    background: #f84464;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.signin-btn:hover {
+    background: #d93655;
+}
+
+
+/* MENU */
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* BACK BAR */
+
+.back-bar {
+    background: #1f2533;
+    width: 100%;
+}
+
+.back-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #333947;
+    color: #ffffff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #f84464;
+    transform: translateX(-2px);
+}
+
+
+/* COMEDY DETAILS */
+
+.comedy-details-section {
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #f2f3f6 0%, #ffffff 100%);
+}
+
+.comedy-details-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 35px;
+    display: flex;
+    gap: 45px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* POSTER */
+
+.comedy-poster {
+    width: 500px;
+    height: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.comedy-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.comedy-poster:hover img {
+    transform: scale(1.03);
+}
+
+
+/* COMEDY INFO */
+
+.comedy-info {
+    flex: 1;
+    padding-top: 5px;
+}
+
+.comedy-type {
+    display: inline-block;
+    background: linear-gradient(135deg, #f84464, #d52d4d);
+    color: #ffffff;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    margin-bottom: 16px;
+}
+
+.comedy-info h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 22px;
+}
+
+.comedy-info > p {
+    font-size: 15px;
+    color: #555f6d;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+
+/* DESCRIPTION */
+
+.comedy-info .description {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    max-width: 650px;
+}
+
+
+/* TRAILER */
+
+.comedy-info h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.trailer {
+    width: 100%;
+    max-width: 560px;
+}
+
+.trailer iframe {
+    width: 100%;
+    height: 280px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* BOOK BUTTON */
+
+.book-btn {
+    margin-top: 25px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 7px;
+    background: #f84464;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 16px rgba(248, 68, 100, 0.25);
+}
+
+.book-btn:hover {
+    background: #d93655;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 20px rgba(248, 68, 100, 0.35);
+}
+
+
+/* FOOTER */
+
+.main-footer {
+    background: #1f2533;
+    color: #ffffff;
+    margin-top: 0;
+    padding-top: 45px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-column a {
+    color: #b9bec8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #f84464;
+    transform: translateX(3px);
+}
+
+
+/* FOOTER DIVIDER */
+
+.footer-divider {
+    max-width: 1160px;
+    height: 1px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* SOCIAL */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 25px 20px;
+}
+
+.footer-social a {
+    color: #c4c8d0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-social a:hover {
+    color: #f84464;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    background: #171b25;
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #9298a4;
+    font-size: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .header-container {
+        gap: 15px;
+    }
+
+    .header-search {
+        flex: 1;
+        width: auto;
+        max-width: 450px;
+    }
+
+    .header-location {
+        display: none;
+    }
+
+    .comedy-details-container {
+        gap: 30px;
+    }
+
+    .comedy-poster {
+        width: 290px;
+        height: 420px;
+    }
+
+    .comedy-info h1 {
+        font-size: 31px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+    .header-container {
+        padding: 10px 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .header-search,
+    .header-location {
+        display: none;
+    }
+
+    .signin-btn {
+        margin-left: auto;
+        padding: 7px 14px;
+    }
+
+    .menu-btn {
+        font-size: 20px;
+    }
+
+    .back-container {
+        padding: 8px 15px;
+    }
+
+    .comedy-details-section {
+        padding: 30px 15px;
+    }
+
+    .comedy-details-container {
+        flex-direction: column;
+        padding: 22px;
+        gap: 30px;
+    }
+
+    .comedy-poster {
+        width: 100%;
+        max-width: 320px;
+        height: 420px;
+        margin: 0 auto;
+    }
+
+    .comedy-info h1 {
+        font-size: 27px;
+    }
+
+    .comedy-info {
+        width: 100%;
+    }
+
+    .trailer {
+        max-width: 100%;
+    }
+
+    .trailer iframe {
+        height: 220px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px 35px;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+    .logo {
+        font-size: 19px;
+    }
+
+    .signin-btn {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+
+    .comedy-poster {
+        height: 390px;
+    }
+
+    .comedy-details-container {
+        padding: 18px;
+    }
+
+    .comedy-info h1 {
+        font-size: 24px;
+    }
+}

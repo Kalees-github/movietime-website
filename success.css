@@ -1,0 +1,413 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* HEADER */
+
+.success-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1240px;
+    min-height: 66px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+
+/* HEADER RIGHT */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.location {
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.signin-btn {
+    background: #f84464;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.signin-btn:hover {
+    background: #d93656;
+}
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* SUCCESS SECTION */
+
+.success-section {
+    min-height: 600px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f5f5f5;
+}
+
+
+/* SUCCESS CARD */
+
+.success-card {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* SUCCESS ICON */
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f84464;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(248, 68, 100, 0.25);
+}
+
+
+/* TITLE */
+
+.success-card h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.success-message {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* TICKET DETAILS */
+
+.ticket-details {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 18px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span {
+    color: #777;
+    font-size: 14px;
+}
+
+.detail-row strong {
+    color: #222;
+    font-size: 14px;
+    text-align: right;
+}
+
+
+/* EMAIL MESSAGE */
+
+.email-message {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTONS */
+
+.success-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.home-btn,
+.bookings-btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.home-btn {
+    border: none;
+    background: #f84464;
+    color: #ffffff;
+}
+
+.home-btn:hover {
+    background: #d93656;
+    transform: translateY(-2px);
+}
+
+.bookings-btn {
+    border: 1px solid #f84464;
+    background: #ffffff;
+    color: #f84464;
+}
+
+.bookings-btn:hover {
+    background: #f84464;
+    color: #ffffff;
+}
+
+
+/* FOOTER */
+
+.main-footer {
+    background: #1f2533;
+    color: #ffffff;
+    padding-top: 45px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-column a {
+    color: #b9bec8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: #f84464;
+    transform: translateX(3px);
+}
+
+
+/* FOOTER DIVIDER */
+
+.footer-divider {
+    width: 90%;
+    max-width: 1160px;
+    height: 1px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* SOCIAL */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 25px 20px;
+}
+
+.footer-social a {
+    color: #c4c8d0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-social a:hover {
+    color: #f84464;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    background: #171b25;
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.footer-bottom p {
+    color: #9298a4;
+    font-size: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .header-container {
+        width: 94%;
+        min-height: 60px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .location {
+        display: none;
+    }
+
+    .header-right {
+        gap: 12px;
+    }
+
+    .signin-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .success-section {
+        padding: 35px 15px;
+        min-height: auto;
+    }
+
+    .success-card {
+        padding: 30px 20px;
+    }
+
+    .success-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 38px;
+    }
+
+    .success-card h1 {
+        font-size: 25px;
+    }
+
+    .detail-row {
+        padding: 13px 14px;
+    }
+
+    .detail-row span,
+    .detail-row strong {
+        font-size: 13px;
+    }
+
+    .success-buttons {
+        flex-direction: column;
+    }
+
+    .home-btn,
+    .bookings-btn {
+        width: 100%;
+    }
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 35px;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+}

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Jana Nayagan - Movie Details</title>
+
+    <link
+        rel="stylesheet"
+        href="jananayagan.css"
+    >
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/image.png"
+                alt="Movie Hub"
+            >
+
+        </a>
+
+        <!-- SEARCH -->
+
+        <div class="header-search">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="text"
+                placeholder="Search for Movies, Events, Plays & More"
+            >
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="back-bar">
+
+    <div class="back-container">
+
+        <button
+            class="back-btn"
+            onclick="goBack()"
+        >
+            &#10094;
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- MOVIE HERO -->
+
+<section class="movie-hero">
+
+    <div class="movie-hero-container">
+
+        <!-- MOVIE POSTER -->
+
+        <div class="movie-poster">
+
+            <img
+                src="images/movie1.webp"
+                alt="Jana Nayagan"
+            >
+
+            <!-- TRAILER -->
+
+            <a
+                href="https://youtu.be/fJaAYcERf3Y"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="trailer-btn"
+            >
+                ▶ Watch Trailer
+            </a>
+
+        </div>
+
+
+        <!-- MOVIE INFORMATION -->
+
+        <div class="movie-information">
+
+            <!-- TITLE -->
+
+            <h1>
+                Jana Nayagan
+            </h1>
+
+            <!-- RATING -->
+
+            <div class="rating">
+
+                <span class="star">
+                    ★
+                </span>
+
+                <strong>
+                    8.5/10
+                </strong>
+
+                <span>
+                    12K Votes
+                </span>
+
+            </div>
+
+            <!-- GENRE -->
+
+            <p class="movie-type">
+
+                Action &nbsp; • &nbsp;
+                Drama &nbsp; • &nbsp;
+                Thriller
+
+            </p>
+
+            <!-- LANGUAGE -->
+
+            <p class="movie-language">
+                🌐 Tamil
+            </p>
+
+            <!-- DURATION -->
+
+            <p class="movie-duration">
+                ⏱ 2h 45m
+            </p>
+
+            <!-- DESCRIPTION -->
+
+            <p class="movie-description">
+
+                Jana Nayagan is an exciting Tamil action drama
+                filled with powerful moments, intense action,
+                emotion and engaging entertainment. Watch this
+                movie in theatres and enjoy the complete
+                big-screen experience.
+
+            </p>
+
+            <!-- BOOK BUTTON -->
+
+            <button
+                class="book-btn"
+                onclick="bookTickets('Jana Nayagan')"
+            >
+                🎟 Book Tickets
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT AND MOVIE DETAILS -->
+
+<section class="details-section">
+
+    <div class="details-container">
+
+        <!-- ABOUT THE MOVIE -->
+
+        <h2>
+            About the Movie
+        </h2>
+
+        <p>
+
+            Jana Nayagan is an upcoming Tamil action drama
+            featuring a powerful story, intense action,
+            emotional moments and an engaging cinematic
+            experience. The movie is designed for audiences
+            who enjoy action-packed entertainment,
+            emotional storytelling and big-screen experiences.
+
+        </p>
+
+
+        <!-- MOVIE DETAILS -->
+
+        <h2 class="movie-details-title">
+            Movie Details
+        </h2>
+
+        <div class="movie-details-list">
+
+            <!-- DIRECTOR -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Director
+                </span>
+
+                <strong>
+                    H. Vinoth
+                </strong>
+
+            </div>
+
+
+            <!-- CAST -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Cast
+                </span>
+
+                <strong>
+                    Vijay, Pooja Hegde,
+                    Bobby Deol
+                </strong>
+
+            </div>
+
+
+            <!-- MUSIC -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Music
+                </span>
+
+                <strong>
+                    Anirudh Ravichander
+                </strong>
+
+            </div>
+
+
+            <!-- GENRE -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Genre
+                </span>
+
+                <strong>
+                    Action, Drama, Thriller
+                </strong>
+
+            </div>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Language
+                </span>
+
+                <strong>
+                    Tamil
+                </strong>
+
+            </div>
+
+
+            <!-- FORMAT -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Format
+                </span>
+
+                <strong>
+                    2D
+                </strong>
+
+            </div>
+
+
+            <!-- DURATION -->
+
+            <div class="movie-detail-row">
+
+                <span>
+                    Duration
+                </span>
+
+                <strong>
+                    2h 45m
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <h2>
+            Ready to watch Jana Nayagan?
+        </h2>
+
+        <p>
+            Select your city, theatre and show time.
+        </p>
+
+        <button
+            class="book-btn"
+            onclick="bookTickets('Jana Nayagan')"
+        >
+            🎟 Book Tickets
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 -->
+
+        <div class="footer-column">
+
+            <h3>
+                Movie Hub
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="#">
+                About Us
+            </a>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Careers
+            </a>
+
+        </div>
+
+
+        <!-- COLUMN 2 -->
+
+        <div class="footer-column">
+
+            <h3>
+                Movies
+            </h3>
+
+            <a href="index.html#movies-section">
+                Movies
+            </a>
+
+            <a href="#">
+                Upcoming Movies
+            </a>
+
+            <a href="#">
+                Top Movies
+            </a>
+
+            <a href="#">
+                Movie Reviews
+            </a>
+
+        </div>
+
+
+        <!-- COLUMN 3 -->
+
+        <div class="footer-column">
+
+            <h3>
+                Events
+            </h3>
+
+            <a href="concerts.html">
+                Music & Concerts
+            </a>
+
+            <a href="comedies.html">
+                Comedy Shows
+            </a>
+
+            <a href="#">
+                Sports
+            </a>
+
+            <a href="index.html#kids-section">
+                Kids & Family
+            </a>
+
+        </div>
+
+
+        <!-- COLUMN 4 -->
+
+        <div class="footer-column">
+
+            <h3>
+                Support
+            </h3>
+
+            <a href="#">
+                Help Center
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Cancellation Policy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- DIVIDER -->
+
+    <div class="footer-divider"></div>
+
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="footer-social">
+
+        <a href="#">
+            Facebook
+        </a>
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            Twitter
+        </a>
+
+        <a href="#">
+            YouTube
+        </a>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Movie Hub. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="jana-nayagan.js"></script>
+
+</body>
+
+</html>

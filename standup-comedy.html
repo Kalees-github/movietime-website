@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Stand Up Comedy Night - Booking</title>
+
+    <link rel="stylesheet"
+          href="standup-comedy.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="details-header">
+
+    <div class="header-container">
+
+        <div class="logo"
+             onclick="goHome()">
+
+            <span class="logo-black">book</span>
+            <span class="logo-red">my</span>
+            <span class="logo-black">show</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- BACK BUTTON -->
+
+<div class="back-container">
+
+    <button
+        class="back-btn"
+        onclick="goBack()">
+        &#10094;
+    </button>
+
+</div>
+
+<!-- COMEDY DETAILS -->
+
+<section class="comedy-details-section">
+
+    <div class="details-container">
+
+        <!-- IMAGE -->
+
+        <div class="comedy-poster">
+
+            <img
+                src="images/comedy1.webp"
+                alt="Stand Up Comedy Night">
+
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="comedy-info">
+
+            <span class="live-label">
+                LIVE COMEDY
+            </span>
+
+            <h1>
+                Stand Up Comedy Night
+            </h1>
+
+            <p class="category">
+                Comedy • Stand Up
+            </p>
+
+            <p class="description">
+                Get ready for an evening filled with
+                laughter, fun and unforgettable moments.
+                Enjoy a live stand-up comedy performance
+                with some of the best comedy talent.
+            </p>
+
+            <div class="event-info">
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Date
+                        </strong>
+
+                        <p>
+                            25 August 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Venue
+                        </strong>
+
+                        <p>
+                            Prozone Mall, Coimbatore
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        ⏱️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Duration
+                        </strong>
+
+                        <p>
+                            Approximately 2 Hours
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DATE & TIME -->
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <h2>
+            Select Date & Time
+        </h2>
+
+        <!-- DATE -->
+
+        <div class="date-section">
+
+            <h3>
+                Select Date
+            </h3>
+
+            <div class="date-list">
+
+                <button
+                    class="date-card active"
+                    onclick="selectDate(this, '25 August 2026')">
+
+                    <span>
+                        TUE
+                    </span>
+
+                    <strong>
+                        25
+                    </strong>
+
+                    <small>
+                        AUG
+                    </small>
+
+                </button>
+
+                <button
+                    class="date-card"
+                    onclick="selectDate(this, '26 August 2026')">
+
+                    <span>
+                        WED
+                    </span>
+
+                    <strong>
+                        26
+                    </strong>
+
+                    <small>
+                        AUG
+                    </small>
+
+                </button>
+
+                <button
+                    class="date-card"
+                    onclick="selectDate(this, '27 August 2026')">
+
+                    <span>
+                        THU
+                    </span>
+
+                    <strong>
+                        27
+                    </strong>
+
+                    <small>
+                        AUG
+                    </small>
+
+                </button>
+
+                <button
+                    class="date-card"
+                    onclick="selectDate(this, '28 August 2026')">
+
+                    <span>
+                        FRI
+                    </span>
+
+                    <strong>
+                        28
+                    </strong>
+
+                    <small>
+                        AUG
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TIME -->
+
+        <div class="time-section">
+
+            <h3>
+                Select Show Time
+            </h3>
+
+            <div class="time-list">
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime(this, '6:00 PM')">
+                    6:00 PM
+                </button>
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime(this, '7:30 PM')">
+                    7:30 PM
+                </button>
+
+                <button
+                    class="time-btn"
+                    onclick="selectTime(this, '9:00 PM')">
+                    9:00 PM
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- VENUE -->
+
+        <div class="venue-section">
+
+            <h3>
+                Venue
+            </h3>
+
+            <div class="venue-card">
+
+                <div class="venue-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h4>
+                        Prozone Mall
+                    </h4>
+
+                    <p>
+                        Sivanandhapuram,
+                        Coimbatore
+                    </p>
+
+                    <span>
+                        Comedy Event Venue
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOOKING -->
+
+        <div class="booking-bottom">
+
+            <div class="price">
+
+                <span>
+                    Tickets from
+                </span>
+
+                <strong>
+                    £8
+                </strong>
+
+            </div>
+
+            <button
+                class="book-btn"
+                onclick="bookComedyTicket()">
+
+                Book Tickets
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 Movie & Events Booking
+    </p>
+
+</footer>
+
+<script src="standup-comedy.js"></script>
+
+</body>
+
+</html>

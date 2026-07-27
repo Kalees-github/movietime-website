@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Animal World - Movie Details</title>
+
+    <link
+        rel="stylesheet"
+        href="kids-movie.css">
+
+</head>
+
+<body>
+
+<!-- MAIN HEADER -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <div class="header-left">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+                <img src="images/image.png" alt="Movie Hub">
+            </a>
+
+            <!-- SEARCH -->
+
+            <div class="search-bar">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="text"
+                    placeholder="Search for Movies, Events, Plays & More">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- BACK BAR -->
+
+<div class="back-bar">
+
+    <div class="back-container">
+
+        <button
+            class="back-btn"
+            onclick="goBack()">
+
+            &#10094;
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MOVIE DETAILS -->
+
+<section class="movie-details-section">
+
+    <div class="movie-details-container">
+
+        <!-- POSTER -->
+
+        <div class="movie-poster">
+
+            <img
+                src="images/kids1.jfif"
+                alt="Animal World">
+
+        </div>
+
+        <!-- MOVIE INFORMATION -->
+
+        <div class="movie-info">
+
+            <!-- MOVIE TYPE -->
+
+            <span class="movie-type">
+                KIDS & FAMILY
+            </span>
+
+            <!-- TITLE -->
+
+            <h1>
+                Animal World
+            </h1>
+
+            <!-- GENRE -->
+
+            <p class="genre">
+                🎬 Animation • Adventure • Family
+            </p>
+
+            <!-- LANGUAGE -->
+
+            <p class="language">
+                🌐 English
+            </p>
+
+            <!-- DURATION -->
+
+            <p class="duration">
+                ⏱ 1h 55m
+            </p>
+
+            <!-- RATING -->
+
+            <p class="rating">
+                ⭐ 8.1/10
+            </p>
+
+            <!-- DESCRIPTION -->
+
+            <p class="description">
+                Enter an amazing animal kingdom where
+                friendship, adventure and fun come together.
+                A perfect family adventure for kids.
+            </p>
+
+            <!-- TRAILER -->
+
+            <h3>
+                Watch Trailer
+            </h3>
+
+            <div class="trailer">
+
+                <iframe
+                    src="https://www.youtube.com/embed/7TavVZMewpY"
+                    title="Animal World Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <!-- BOOK BUTTON -->
+
+            <button
+                class="book-btn"
+                onclick="bookAnimalMovie()">
+
+                🎟 Book Tickets
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 -->
+
+        <div class="footer-column">
+
+            <h3>BookMyShow</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Careers</a>
+
+        </div>
+
+        <!-- COLUMN 2 -->
+
+        <div class="footer-column">
+
+            <h3>Movies</h3>
+
+            <a href="index.html#movies-section">Movies</a>
+
+            <a href="#">Upcoming Movies</a>
+
+            <a href="#">Top Movies</a>
+
+            <a href="#">Movie Reviews</a>
+
+        </div>
+
+        <!-- COLUMN 3 -->
+
+        <div class="footer-column">
+
+            <h3>Events</h3>
+
+            <a href="concerts.html">Music & Concerts</a>
+
+            <a href="#">Comedy Shows</a>
+
+            <a href="#">Sports</a>
+
+            <a href="index.html#kids-section">Kids & Family</a>
+
+        </div>
+
+        <!-- COLUMN 4 -->
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="#">Help Center</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Cancellation Policy</a>
+
+        </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+
+    <div class="footer-divider"></div>
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="footer-social">
+
+        <a href="#">Facebook</a>
+
+        <a href="#">Instagram</a>
+
+        <a href="#">Twitter</a>
+
+        <a href="#">YouTube</a>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 BookMyShow Clone. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function goBack() {
+    window.location.href = "index.html";
+}
+
+function bookAnimalMovie() {
+    alert("Animal World movie ticket booking page will open soon!");
+}
+
+</script>
+
+</body>
+
+</html>

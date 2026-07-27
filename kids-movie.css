@@ -1,0 +1,977 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Roboto',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+
+/* 1. MAIN HEADER */
+
+.main-header {
+
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.header-container {
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    flex: 1;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+
+/* SEARCH BAR */
+
+.search-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 4px;
+
+    padding: 0 12px;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 42px;
+}
+
+
+.search-icon {
+
+    color: #999999;
+
+    margin-right: 12px;
+
+    font-size: 14px;
+}
+
+
+.search-bar input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 14px;
+
+    color: #333333;
+}
+
+
+.search-bar input::placeholder {
+
+    color: #777777;
+}
+
+
+/* HEADER RIGHT */
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+.location-picker {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+
+.arrow-icon {
+
+    font-size: 10px;
+
+    color: #666666;
+}
+
+
+.signin-btn {
+
+    background-color: #f84464;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 6px 16px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+.signin-btn:hover {
+
+    background-color: #e23351;
+}
+
+
+.menu-btn {
+
+    font-size: 18px;
+
+    color: #333333;
+
+    cursor: pointer;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 5px;
+}
+
+
+/* 2. BACK BAR */
+
+.back-bar {
+
+    background: #1f2533;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.back-container {
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+.back-btn {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #333947;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.back-btn:hover {
+
+    background: #f84464;
+
+    transform: translateX(-2px);
+}
+
+
+/* 3. MOVIE DETAILS SECTION */
+
+.movie-details-section {
+
+    padding: 50px 20px;
+
+    background: #f5f5f5;
+}
+
+
+.movie-details-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    display: flex;
+
+    gap: 45px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 4. POSTER */
+
+.movie-poster {
+
+    width: 320px;
+
+    flex-shrink: 0;
+}
+
+
+.movie-poster img {
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 5. MOVIE INFORMATION */
+
+.movie-info {
+
+    flex: 1;
+
+    padding-top: 5px;
+}
+
+
+.movie-type {
+
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f84464,
+            #d93655
+        );
+
+    color: #ffffff;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 15px;
+}
+
+
+.movie-info h1 {
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    color: #222222;
+
+    margin-bottom: 15px;
+}
+
+
+.genre {
+
+    color: #555555;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.language {
+
+    color: #666666;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.duration {
+
+    color: #666666;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.rating {
+
+    color: #333333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.description {
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+    max-width: 600px;
+}
+
+
+/* 6. TRAILER */
+
+.movie-info h3 {
+
+    font-size: 20px;
+
+    color: #222222;
+
+    margin-bottom: 12px;
+}
+
+
+.trailer {
+
+    width: 100%;
+
+    max-width: 550px;
+}
+
+
+.trailer iframe {
+
+    width: 100%;
+
+    height: 280px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+/* 7. BOOK BUTTON */
+
+.book-btn {
+
+    margin-top: 25px;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #f84464;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    box-shadow:
+        0 5px 15px rgba(248, 68, 100, 0.25);
+}
+
+
+.book-btn:hover {
+
+    background-color: #d93655;
+
+    transform: translateY(-2px);
+}
+
+
+/* 8. FOOTER */
+
+.main-footer {
+
+    background: #1f2533;
+
+    color: #ffffff;
+
+    margin-top: 20px;
+
+    padding-top: 45px;
+}
+
+
+.footer-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 45px;
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-column h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.footer-column a {
+
+    color: #b9bec8;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+
+    color: #f84464;
+
+    transform: translateX(3px);
+}
+
+
+/* FOOTER DIVIDER */
+
+.footer-divider {
+
+    max-width: 1160px;
+
+    height: 1px;
+
+    margin: 0 auto;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* SOCIAL LINKS */
+
+.footer-social {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 25px 20px;
+}
+
+
+.footer-social a {
+
+    color: #c4c8d0;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-social a:hover {
+
+    color: #f84464;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+
+    background: #171b25;
+
+    text-align: center;
+
+    padding: 18px 15px;
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #9298a4;
+
+    font-size: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+
+        padding: 12px 20px;
+    }
+
+
+    .search-bar {
+
+        width: 400px;
+    }
+
+
+    .header-left {
+
+        gap: 20px;
+    }
+
+
+    .header-right {
+
+        gap: 15px;
+    }
+
+
+    .movie-details-container {
+
+        gap: 30px;
+    }
+
+
+    .movie-poster {
+
+        width: 290px;
+    }
+
+
+    .movie-poster img {
+
+        height: 410px;
+    }
+
+
+    .movie-info h1 {
+
+        font-size: 32px;
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    /* HEADER */
+
+    .header-container {
+
+        padding: 10px 15px;
+
+        gap: 12px;
+    }
+
+
+    .header-left {
+
+        gap: 0;
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+    }
+
+
+    .search-bar {
+
+        display: none;
+    }
+
+
+    .location-picker {
+
+        display: none;
+    }
+
+
+    .header-right {
+
+        gap: 12px;
+
+        margin-left: auto;
+    }
+
+
+    .signin-btn {
+
+        padding:
+            7px 14px;
+    }
+
+
+    .menu-btn {
+
+        font-size: 20px;
+    }
+
+
+    /* BACK BAR */
+
+    .back-bar {
+
+        padding: 8px 0;
+    }
+
+
+    .back-container {
+
+        padding: 0 15px;
+
+        font-size: 14px;
+    }
+
+
+    /* MOVIE */
+
+    .movie-details-section {
+
+        padding:
+            30px 15px;
+    }
+
+
+    .movie-details-container {
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 30px;
+    }
+
+
+    .movie-poster {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        margin: auto;
+    }
+
+
+    .movie-poster img {
+
+        height: 430px;
+    }
+
+
+    .movie-info {
+
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .movie-info h1 {
+
+        font-size: 28px;
+    }
+
+
+    .description {
+
+        font-size: 14px;
+    }
+
+
+    .trailer {
+
+        max-width: 100%;
+    }
+
+
+    .trailer iframe {
+
+        height: 220px;
+    }
+
+
+    .book-btn {
+
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .main-footer {
+
+        margin-top: 30px;
+
+        padding-top: 35px;
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding:
+            0 20px 35px;
+    }
+
+
+    .footer-social {
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+    .logo {
+
+        font-size: 19px;
+    }
+
+
+    .logo-red {
+
+        font-size: 14px;
+    }
+
+
+    .signin-btn {
+
+        padding:
+            7px 11px;
+
+        font-size: 12px;
+    }
+
+
+    .movie-details-section {
+
+        padding:
+            20px 10px;
+    }
+
+
+    .movie-details-container {
+
+        padding: 18px;
+    }
+
+
+    .movie-poster img {
+
+        height: 400px;
+    }
+
+
+    .movie-info h1 {
+
+        font-size: 24px;
+    }
+
+
+    .movie-type {
+
+        font-size: 10px;
+    }
+
+
+    .trailer iframe {
+
+        height: 200px;
+    }
+
+}

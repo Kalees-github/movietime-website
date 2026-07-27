@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Kids Adventure - Movie Details</title>
+
+    <link
+        rel="stylesheet"
+        href="kids-movie.css">
+
+</head>
+
+<body>
+
+<!-- MAIN HEADER -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <div class="header-left">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+                <img src="images/image.png" alt="Movie Hub">
+            </a>
+
+            <!-- SEARCH -->
+
+            <div class="search-bar">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="text"
+                    placeholder="Search for Movies, Events, Plays & More">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- BACK BAR -->
+
+<div class="back-bar">
+
+    <div class="back-container">
+
+        <button
+            class="back-btn"
+            onclick="goBack()">
+
+            &#10094;
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MOVIE DETAILS -->
+
+<section class="movie-details-section">
+
+    <div class="movie-details-container">
+
+        <!-- POSTER -->
+
+        <div class="movie-poster">
+
+            <img
+                src="images/kids1.webp"
+                alt="Kids Adventure">
+
+        </div>
+
+        <!-- MOVIE INFORMATION -->
+
+        <div class="movie-info">
+
+            <span class="movie-type">
+                KIDS & FAMILY
+            </span>
+
+            <h1>
+                Kids Adventure
+            </h1>
+
+            <p class="genre">
+                🎬 Animation • Family • Adventure
+            </p>
+
+            <p class="language">
+                🌐 English
+            </p>
+
+            <p class="duration">
+                ⏱ 2h 10m
+            </p>
+
+            <p class="rating">
+                ⭐ 8.2/10
+            </p>
+
+            <p class="description">
+                Join an exciting family adventure filled
+                with fun, friendship and magical moments.
+                Follow the young heroes as they discover
+                an amazing world full of adventure,
+                excitement and surprises.
+            </p>
+
+            <!-- TRAILER -->
+
+            <h3>
+                Watch Trailer
+            </h3>
+
+            <div class="trailer">
+
+                <iframe
+                    src="https://www.youtube.com/embed/QFwJJywzbDs"
+                    title="Kids Adventure Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <!-- BOOK BUTTON -->
+
+            <button
+                class="book-btn"
+                onclick="bookKidsMovie()">
+
+                🎟 Book Tickets
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 -->
+
+        <div class="footer-column">
+
+            <h3>BookMyShow</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Careers</a>
+
+        </div>
+
+        <!-- COLUMN 2 -->
+
+        <div class="footer-column">
+
+            <h3>Movies</h3>
+
+            <a href="index.html#movies-section">Movies</a>
+
+            <a href="#">Upcoming Movies</a>
+
+            <a href="#">Top Movies</a>
+
+            <a href="#">Movie Reviews</a>
+
+        </div>
+
+        <!-- COLUMN 3 -->
+
+        <div class="footer-column">
+
+            <h3>Events</h3>
+
+            <a href="concerts.html">Music & Concerts</a>
+
+            <a href="#">Comedy Shows</a>
+
+            <a href="#">Sports</a>
+
+            <a href="index.html#kids-section">Kids & Family</a>
+
+        </div>
+
+        <!-- COLUMN 4 -->
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="#">Help Center</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Cancellation Policy</a>
+
+        </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+
+    <div class="footer-divider"></div>
+
+    <!-- SOCIAL -->
+
+    <div class="footer-social">
+
+        <a href="#">Facebook</a>
+
+        <a href="#">Instagram</a>
+
+        <a href="#">Twitter</a>
+
+        <a href="#">YouTube</a>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 BookMyShow Clone. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function goBack() {
+    window.location.href = "index.html";
+}
+
+function bookKidsMovie() {
+    alert("Movie ticket booking page will open soon!");
+}
+
+</script>
+
+</body>
+
+</html>

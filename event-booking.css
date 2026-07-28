@@ -1,6 +1,4 @@
-/* =================================
-   RESET
-================================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -15,9 +13,7 @@ body {
 }
 
 
-/* =================================
-   HEADER
-================================= */
+/*  HEADER */
 
 .booking-header {
     background: #ffffff;
@@ -60,9 +56,7 @@ body {
 }
 
 
-/* =================================
-   MAIN SECTION
-================================= */
+/*  MAIN SECTION */
 
 .booking-section {
     padding: 35px 15px 60px;
@@ -73,10 +67,7 @@ body {
     margin: auto;
 }
 
-
-/* =================================
-   EVENT SUMMARY
-================================= */
+/*  EVENT SUMMARY */
 
 .event-summary {
     background: #ffffff;
@@ -141,9 +132,7 @@ body {
 }
 
 
-/* =================================
-   BOOKING CARD
-================================= */
+/* BOOKING CARD */
 
 .booking-card {
     background: #ffffff;
@@ -166,9 +155,7 @@ body {
 }
 
 
-/* =================================
-   DATE
-================================= */
+/* DATE */
 
 .date-options {
     display: flex;
@@ -243,9 +230,7 @@ body {
 }
 
 
-/* =================================
-   LOCATION
-================================= */
+/* LOCATION */
 
 .location-options {
     display: flex;
@@ -292,9 +277,7 @@ body {
 }
 
 
-/* =================================
-   TIME
-================================= */
+/* TIME */
 
 .time-options {
     display: flex;
@@ -339,9 +322,7 @@ body {
 }
 
 
-/* =================================
-   TICKET QUANTITY
-================================= */
+/* TICKET QUANTITY */
 
 .ticket-row {
     display: flex;
@@ -405,9 +386,7 @@ body {
 }
 
 
-/* =================================
-   BOOKING SUMMARY
-================================= */
+/* BOOKING SUMMARY */
 
 .booking-summary {
     background: #ffffff;
@@ -472,9 +451,7 @@ body {
 }
 
 
-/* =================================
-   CONTINUE BUTTON
-================================= */
+/* CONTINUE BUTTON */
 
 .continue-btn {
     width: 100%;
@@ -507,9 +484,7 @@ body {
 }
 
 
-/* =================================
-   PAYMENT
-================================= */
+/* PAYMENT */
 
 .payment-card {
     display: none;
@@ -546,9 +521,7 @@ body {
 }
 
 
-/* =================================
-   PAYMENT METHODS
-================================= */
+/* PAYMENT METHODS */
 
 .payment-methods {
     display: flex;
@@ -601,9 +574,7 @@ body {
 }
 
 
-/* =================================
-   PAYMENT FORM
-================================= */
+/* PAYMENT FORM */
 
 .payment-form {
     display: none;
@@ -670,9 +641,7 @@ body {
 }
 
 
-/* =================================
-   PAYMENT TOTAL
-================================= */
+/* PAYMENT TOTAL */
 
 .payment-total {
     display: flex;
@@ -693,9 +662,7 @@ body {
 }
 
 
-/* =================================
-   PAY BUTTON
-================================= */
+/*  PAY BUTTON */
 
 .pay-btn {
     width: 100%;
@@ -726,9 +693,7 @@ body {
 }
 
 
-/* =================================
-   SUCCESS
-================================= */
+/* SUCCESS */
 
 .success-card {
     display: none;
@@ -840,9 +805,7 @@ body {
 }
 
 
-/* =================================
-   TABLET
-================================= */
+/* TABLET */
 
 @media (max-width: 768px) {
 
@@ -866,9 +829,7 @@ body {
 }
 
 
-/* =================================
-   MOBILE
-================================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -997,9 +958,7 @@ body {
 }
 
 
-/* =================================
-   SMALL MOBILE
-================================= */
+/* SMALL MOBILE */
 
 @media (max-width: 400px) {
 

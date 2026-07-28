@@ -340,9 +340,11 @@ function goBack() {
 
 function bookKidsMovie() {
 
-    alert(
-        "Movie ticket booking page will open soon!"
-    );
+    // Store selected movie name
+    localStorage.setItem("selectedMovie", "Magic World");
+
+    // Open movie booking page
+    window.location.href = "booking.html?movie=kids3";
 
 }
 

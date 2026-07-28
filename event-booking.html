@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Booking | Movie Hub</title>
+
+    <link rel="stylesheet" href="event-booking.css">
+</head>
+
+<body>
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header class="booking-header">
+
+    <div class="booking-header-container">
+
+        <a href="index.html" class="logo">
+            <img src="images/image.png" alt="Movie Hub">
+        </a>
+
+        <h2>Event Booking</h2>
+
+        <a href="index.html" class="home-btn">
+            Home
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =================================
+     BOOKING SECTION
+================================= -->
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <!-- =================================
+     EVENT INFORMATION
+================================== -->
+
+<div class="event-summary">
+
+    <img
+        id="eventImage"
+        src="images/comedy1.webp"
+        alt="Event"
+    >
+
+    <div class="event-summary-info">
+
+        <span id="eventType">COMEDY SHOW</span>
+
+        <h1 id="eventName">
+            Stand Up Comedy Night
+        </h1>
+
+        <p>
+            📍 <span id="summaryLocation">Coimbatore</span>
+        </p>
+
+        <p>
+            🎟 Starting from ₹299
+        </p>
+
+    </div>
+
+</div>
+
+        <!-- =================================
+             STEP 1 - DATE
+        ================================== -->
+
+        <div class="booking-card">
+
+            <h2>1. Choose Date</h2>
+
+            <div class="date-options">
+
+                <button
+                    class="date-option"
+                    onclick="selectDate(this, '22 August 2026')"
+                >
+                    <strong>SAT</strong>
+                    <span>22 AUG</span>
+                </button>
+
+                <button
+                    class="date-option"
+                    onclick="selectDate(this, '23 August 2026')"
+                >
+                    <strong>SUN</strong>
+                    <span>23 AUG</span>
+                </button>
+
+                <button
+                    class="date-option"
+                    onclick="selectDate(this, '29 August 2026')"
+                >
+                    <strong>SAT</strong>
+                    <span>29 AUG</span>
+                </button>
+
+                <button
+                    class="date-option"
+                    onclick="selectDate(this, '30 August 2026')"
+                >
+                    <strong>SUN</strong>
+                    <span>30 AUG</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             STEP 2 - LOCATION
+        ================================== -->
+
+        <div class="booking-card">
+
+            <h2>2. Choose Location</h2>
+
+            <div class="location-options">
+
+                <button
+                    class="location-option"
+                    onclick="selectLocation(this, 'Coimbatore')"
+                >
+                    📍 Coimbatore
+                </button>
+
+                <button
+                    class="location-option"
+                    onclick="selectLocation(this, 'Chennai')"
+                >
+                    📍 Chennai
+                </button>
+
+                <button
+                    class="location-option"
+                    onclick="selectLocation(this, 'Bengaluru')"
+                >
+                    📍 Bengaluru
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             STEP 3 - TIME
+        ================================== -->
+
+        <div class="booking-card">
+
+            <h2>3. Choose Time</h2>
+
+            <div class="time-options">
+
+                <button
+                    class="time-option"
+                    onclick="selectTime(this, '10:00 AM')"
+                >
+                    10:00 AM
+                </button>
+
+                <button
+                    class="time-option"
+                    onclick="selectTime(this, '2:00 PM')"
+                >
+                    2:00 PM
+                </button>
+
+                <button
+                    class="time-option"
+                    onclick="selectTime(this, '7:00 PM')"
+                >
+                    7:00 PM
+                </button>
+
+                <button
+                    class="time-option"
+                    onclick="selectTime(this, '9:30 PM')"
+                >
+                    9:30 PM
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             STEP 4 - TICKETS
+        ================================== -->
+
+        <div class="booking-card">
+
+            <h2>4. Select Tickets</h2>
+
+            <div class="ticket-row">
+
+                <div>
+                    <strong>Regular Ticket</strong>
+                    <p>₹299 per ticket</p>
+                </div>
+
+                <div class="quantity-control">
+
+                    <button onclick="changeQuantity(-1)">
+                        −
+                    </button>
+
+                    <span id="ticketQuantity">
+                        1
+                    </span>
+
+                    <button onclick="changeQuantity(1)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             BOOKING SUMMARY
+        ================================== -->
+
+        <div class="booking-summary">
+
+            <h2>Booking Summary</h2>
+
+            <div class="summary-row">
+                <span>Event</span>
+                <strong id="summaryEvent">
+                    Stand Up Comedy Night
+                </strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Date</span>
+                <strong id="summaryDate">
+                    Not selected
+                </strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Location</span>
+                <strong id="summaryLocationText">
+                    Not selected
+                </strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Time</span>
+                <strong id="summaryTime">
+                    Not selected
+                </strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Tickets</span>
+                <strong id="summaryTickets">
+                    1
+                </strong>
+            </div>
+
+            <div class="summary-row total">
+                <span>Total Amount</span>
+                <strong id="totalAmount">
+                    ₹299
+                </strong>
+            </div>
+
+            <button
+                class="continue-btn"
+                onclick="showPayment()"
+            >
+                Continue to Payment
+            </button>
+
+        </div>
+
+
+        <!-- =================================
+             PAYMENT SECTION
+        ================================== -->
+
+        <div
+            class="payment-card"
+            id="paymentSection"
+        >
+
+            <h2>💳 Payment</h2>
+
+            <p class="payment-note">
+                Select a payment method to complete your booking.
+            </p>
+
+
+            <!-- PAYMENT METHODS -->
+
+            <div class="payment-methods">
+
+                <button
+                    class="payment-method"
+                    onclick="selectPayment(this, 'UPI')"
+                >
+                    <span>📱</span>
+                    <strong>UPI</strong>
+                </button>
+
+                <button
+                    class="payment-method"
+                    onclick="selectPayment(this, 'Card')"
+                >
+                    <span>💳</span>
+                    <strong>Credit / Debit Card</strong>
+                </button>
+
+                <button
+                    class="payment-method"
+                    onclick="selectPayment(this, 'Net Banking')"
+                >
+                    <span>🏦</span>
+                    <strong>Net Banking</strong>
+                </button>
+
+            </div>
+
+
+            <!-- UPI -->
+
+            <div
+                class="payment-form"
+                id="upiForm"
+            >
+
+                <label>UPI ID</label>
+
+                <input
+                    type="text"
+                    id="upiInput"
+                    placeholder="example@upi"
+                >
+
+            </div>
+
+
+            <!-- CARD -->
+
+            <div
+                class="payment-form"
+                id="cardForm"
+            >
+
+                <label>Card Number</label>
+
+                <input
+                    type="text"
+                    id="cardNumber"
+                    maxlength="19"
+                    placeholder="1234 5678 9012 3456"
+                >
+
+                <div class="card-row">
+
+                    <div>
+                        <label>Expiry</label>
+
+                        <input
+                            type="text"
+                            placeholder="MM/YY"
+                            maxlength="5"
+                        >
+                    </div>
+
+                    <div>
+                        <label>CVV</label>
+
+                        <input
+                            type="password"
+                            placeholder="CVV"
+                            maxlength="3"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NET BANKING -->
+
+            <div
+                class="payment-form"
+                id="netBankingForm"
+            >
+
+                <label>Select Bank</label>
+
+                <select>
+
+                    <option value="">
+                        Select Bank
+                    </option>
+
+                    <option>State Bank of India</option>
+                    <option>HDFC Bank</option>
+                    <option>ICICI Bank</option>
+                    <option>Axis Bank</option>
+                    <option>Kotak Mahindra Bank</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="payment-total">
+
+                <span>Payable Amount</span>
+
+                <strong id="paymentAmount">
+                    ₹299
+                </strong>
+
+            </div>
+
+
+            <button
+                class="pay-btn"
+                onclick="confirmBooking()"
+            >
+                Pay & Confirm Booking
+            </button>
+
+        </div>
+
+
+        <!-- =================================
+             SUCCESS MESSAGE
+        ================================== -->
+
+        <div
+            class="success-card"
+            id="successCard"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Booking Confirmed!</h2>
+
+            <p>
+                Your event ticket has been booked successfully.
+            </p>
+
+            <div class="ticket-details">
+
+                <p>
+                    <strong>Event:</strong>
+                    <span id="successEvent"></span>
+                </p>
+
+                <p>
+                    <strong>Date:</strong>
+                    <span id="successDate"></span>
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    <span id="successLocation"></span>
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    <span id="successTime"></span>
+                </p>
+
+                <p>
+                    <strong>Tickets:</strong>
+                    <span id="successTickets"></span>
+                </p>
+
+                <p>
+                    <strong>Amount:</strong>
+                    <span id="successAmount"></span>
+                </p>
+
+            </div>
+
+            <button
+                class="home-button"
+                onclick="window.location.href='index.html'"
+            >
+                Back to Home
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="event-booking.js"></script>
+
+</body>
+</html>

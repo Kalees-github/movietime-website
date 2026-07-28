@@ -265,7 +265,11 @@ function goBack() {
 }
 
 function bookKidsMovie() {
-    alert("Movie ticket booking page will open soon!");
+    // Store selected movie name
+    localStorage.setItem("selectedMovie", "Kids Adventure");
+
+    // Open movie booking page
+    window.location.href = "booking.html?movie=kids";
 }
 
 </script>

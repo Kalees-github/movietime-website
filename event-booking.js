@@ -1,6 +1,4 @@
-// =================================
 // EVENT BOOKING DATA
-// =================================
 
 let selectedDate = "";
 let selectedLocation = "";
@@ -10,10 +8,7 @@ let ticketQuantity = 1;
 
 let selectedPayment = "";
 
-
-// =================================
 // EVENT DATA
-// =================================
 
 const eventData = {
 
@@ -77,10 +72,7 @@ const eventData = {
         times: ["6:30 PM", "8:30 PM"]
     },
 
-
-    // =================================
     // CONCERTS
-    // =================================
 
     concert1: {
     type: "MUSIC FESTIVAL",
@@ -164,10 +156,7 @@ const eventData = {
 
 };
 
-
-// =================================
 // GET EVENT FROM URL
-// =================================
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -179,9 +168,7 @@ const currentEvent =
 const ticketPrice = currentEvent.price;
 
 
-// =================================
 // LOAD EVENT INFORMATION
-// =================================
 
 function loadEventData() {
 
@@ -272,10 +259,7 @@ function loadEventData() {
 
 }
 
-
-// =================================
 // CREATE DATE OPTIONS
-// =================================
 
 function createDates() {
 
@@ -314,10 +298,7 @@ function createDates() {
 
 }
 
-
-// =================================
 // CREATE LOCATION OPTIONS
-// =================================
 
 function createLocations() {
 
@@ -356,10 +337,7 @@ function createLocations() {
 
 }
 
-
-// =================================
 // CREATE TIME OPTIONS
-// =================================
 
 function createTimes() {
 
@@ -398,10 +376,7 @@ function createTimes() {
 
 }
 
-
-// =================================
 // SELECT DATE
-// =================================
 
 function selectDate(button, date) {
 
@@ -433,10 +408,7 @@ function selectDate(button, date) {
 
 }
 
-
-// =================================
 // SELECT LOCATION
-// =================================
 
 function selectLocation(button, location) {
 
@@ -484,10 +456,7 @@ function selectLocation(button, location) {
 
 }
 
-
-// =================================
 // SELECT TIME
-// =================================
 
 function selectTime(button, time) {
 
@@ -519,10 +488,7 @@ function selectTime(button, time) {
 
 }
 
-
-// =================================
 // CHANGE TICKET QUANTITY
-// =================================
 
 function changeQuantity(value) {
 
@@ -571,10 +537,7 @@ function changeQuantity(value) {
 
 }
 
-
-// =================================
 // UPDATE TOTAL
-// =================================
 
 function updateTotal() {
 
@@ -607,10 +570,7 @@ function updateTotal() {
 
 }
 
-
-// =================================
 // SHOW PAYMENT
-// =================================
 
 function showPayment() {
 
@@ -664,10 +624,7 @@ function showPayment() {
 
 }
 
-
-// =================================
 // SELECT PAYMENT
-// =================================
 
 function selectPayment(button, method) {
 
@@ -723,10 +680,7 @@ function selectPayment(button, method) {
 
 }
 
-
-// =================================
 // CONFIRM BOOKING
-// =================================
 
 function confirmBooking() {
 
@@ -876,10 +830,7 @@ function confirmBooking() {
 
 }
 
-
-// =================================
 // RUN WHEN PAGE LOADS
-// =================================
 
 document.addEventListener(
     "DOMContentLoaded",

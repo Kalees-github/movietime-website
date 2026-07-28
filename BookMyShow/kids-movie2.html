@@ -277,7 +277,11 @@ function goBack() {
 }
 
 function bookAnimalMovie() {
-    alert("Animal World movie ticket booking page will open soon!");
+    // Store selected movie name
+    localStorage.setItem("selectedMovie", "Animal World");
+
+    // Open movie booking page
+    window.location.href = "booking.html?movie=kids2";
 }
 
 </script>
